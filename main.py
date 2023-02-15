@@ -137,9 +137,6 @@ def login():
         user = form.email.data
         passwd = form.password.data
         db_user = Users.query.filter_by(email=user).first()
-        if db_user.id == 1:
-            is_admin = True
-        print(is_admin)
         if db_user is None:
             flash("User does not exists. Please retry or register.")
             return redirect(url_for('login'))
