@@ -11,6 +11,7 @@ from wtforms import PasswordField, SubmitField
 from forms import CreatePostForm, RegisterForn, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 from functools import wraps
+import email_validator
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
